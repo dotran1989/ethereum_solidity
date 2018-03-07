@@ -10,3 +10,6 @@ If you are on windows, open up your terminal as administrator and run the follow
 npm install --global --production windows-build-tools 
 
 Thats it!  This installs a few build tools that are required to install web3 successfully on a Windows machine. You should only have to run this one time. Let the command do its thing then continue on.
+
+Install Mocha and Web3
+npm install --save mocha ganache-cli web3@1.0.0-beta.26
