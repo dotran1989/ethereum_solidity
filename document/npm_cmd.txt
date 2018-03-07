@@ -1,0 +1,2 @@
+Instal node modules folder
+$ npm install --save solc

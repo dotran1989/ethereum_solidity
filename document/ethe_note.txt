@@ -1,3 +1,32 @@
 Ethereum: The Ultimate Smart Contract and Decentralized Application Platform 
-
 http://web.archive.org/web/20131228111141/http://vbuterin.com/ethereum.html
+
+Remix
+https://remix.ethereum.org/#optimize=false&version=soljson-v0.4.20+commit.3155dd80.js
+
+Ethereum converter
+https://etherconverter.online/
+
+Gas cost from Yellow Paper
+https://docs.google.com/spreadsheets/d/1n6mRqkBz3iWcOlRem_mO09GtSKEKrAsfO7Frgx18pNU/edit#gid=0
+
+Mnemonic Code Converter
+https://iancoleman.io/bip39/
+
+Testnet Faucet
+https://faucet.rinkeby.io/
+
+VS Code
+
+Solidity is the language used in Ethereum to create smart contracts, this extension provides:
+
+Syntax highlighting
+Snippets
+Compilation of the current contract (Press F1 Solidity : Compile Current Solidity Contract), or F5
+Compilation of all the contracts (Press F1 Solidity : Compile all Solidity Contracts), or Ctrl+F5 / Cmd+F5
+Code completion for all contracts / libraries in the current file and all referenced imports
+Default project structure (solidity files needs to be in the 'src' directory, and libraries in the 'lib' directory). Libraries will follow the same structure.
+Compilation supporting EIP82 (dappfile and dependency packages)
+Support for different solidity versions (Remote and local)
+Code generation using https://github.com/Nethereum/abi-code-gen, it includes currently the default template for Nethereum service, dtos generation. (Open 'contractName.json' after compilation from the bin folder. Press F1 and press Solidity: Code generate from compilation output..) Please contribute more templates.
+Linting using Solhint or Solium

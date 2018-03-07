@@ -1,0 +1,234 @@
+Is the Main Network the DAO?
+Dante · Lecture 5 · a month ago
+
+What is the difference between a Network, DAO and a blockchain?
+
+GK
+Greg  · a month ago 
+
+Yes, the main Ethereum network is a DAO.
+
+A network can be from one node, desktop computers, servers, mobile, tablet devices, person to another.  
+A Decentralized Autonomous Organization is essentially code that outlines governance and rules for a given organization that runs on a blockchain.   
+A DAO runs a smart contract or smart contracts.  
+A blockchain ( a very simple way of thinking about it) is essentially a series of crypto secure distributed excel spreadsheets, data structures, that are replicated (striped) across an array of nodes (desktop computers, servers, mobile and tablet devices).
+
+
+@ Valerie. Thanks that clear things up. However what exactly is a Decentralized Network then? Is it simply referring to the Ethereum Network as a whole?
+
+Jaro  · a month ago 
+I would say it a bit diferently;
+
+The network consists of nodes, this is the infrastructure. This network uses blockchain as its protocol, an agreement how 'true state' is defined and agreed upon by the nodes on the network. Based on this you can create a DAO where the 'data/state' is decentrally managed by rules of a contract, this could be seen as the application.
+
+Ethereum is one of many Decentralized networks.  Decentralized generally refers to no central control.  No central server.  Facebook, Google etc own and control their servers, they are centralized.  In a blockchain the miners who number in the thousands, generally, solve the crypto puzzles to mine the blocks, the data sets.
+
+
+
+=========================
+
+How is the proof of work related to the public key?
+Rwiju · Lecture 13 · a month ago
+Wanted a clarification
+
+Does the public key has the proof of work which a miner needs to solve to make a block valid
+
+Stephen — Instructor  · a month ago 
+The miner who finds the successful proof of work solution has their address added onto the block 'header'.  It indicates the person/entity who found the solution.
+
+Mark as helpful
+RP
+Rwiju  · a month ago 
+Thanks Stephen. But i am still a bit confused. So a person sends a block using his private key to the network. the miners users the public key to access it and solve the proof of work and then add it to the chain. is that the sequence of operations or am i missing something over here
+
+   
+
+Mark as helpful
+Stephen — Instructor  · a month ago 
+You're very close, just a few small changes to your description-
+
+A user will send a transaction to the network.  A miner will receive that transaction, validate it, then add it to a block and solve the proof of work algorithm.  A miner may receive many transactions in one instant, so they get the benefit of deciding which transactions will be added to a block.  To decide that, they'll look at the gasPrice that each user is willing to pay, then select the transactions with the highest gasPrice.  That maximizes the amount of money they (the miner) get paid.
+
+Mark as helpful (2)
+RP
+Rwiju  · a month ago 
+Thanks a lot. sorry to bug with you with basics but just want to get a better clarity. I have couple of questions
+
+a) In bitcoin, if we are following only the transaction and not the net balance. Then suppose bob send tim, n coin then do the miners check all the transaction that bob has done from the beginning of time. Seems to be a cumbersome method.
+
+b) What are the types of validation the miners can do, I am guessing I cant randomly ask then to validate a data from the net because then the network will never be able to come to a  consensus and the whole system would break
+
+   
+
+Mark as helpful
+Stephen — Instructor  · a month ago 
+A) You are correct, every node will replay all transactions.  Yes, this is cumbersome but it is apart of the security and consistency that a blockchain provides.
+
+B) Not sure what you mean by this question, can you tell me exactly what you mean by 'types of validation'?
+
+Mark as helpful
+RP
+Rwiju  · a month ago 
+So if in a contract i want to compare the dollar exchange rate/stock price of a company. Now at different point of time the rate will be different and the miner will find it difficult to come to a consensus. So I am guessing I cant run a program like this on ethereum. if we can can you please explain how it works (if consensus building is difficult among miners) 
+
+Mark as helpful
+Stephen — Instructor  · a month ago 
+Ah, I see what you're getting at.  Yes, your intuition is correct.  Here's the rule of thumb: information can flow into a contract as arguments, but the contract cannot reach out of the network for anything.
+
+The exact value of arguments that we call a function with can be (and are) recorded on the blockchain, so in 5 years we'll know exactly how you called a function today.  However, if a contract reached out to some 3rd party API, it might return a completely different value in 5 years than what it returns today, so we would not be able to 'replay' transactions to verify the current state.
+
+Mark as helpful
+Stephen — Instructor  · a month ago 
+Followup: That means no network requests to outside api.  It also means no true random number generation (RNG), because true RNG would mean that replaying transactions in the future could lead to different outcomes.
+
+Mark as helpful
+RP
+Rwiju  · a month ago 
+Thanks a lot stephen. 
+
+However, i was going through the net and i stumbled across something called oracle. Is it something that i should read upon if I want to build a contract which want to communicate to the outside world. just wanted your opinion
+
+Mark as helpful
+Stephen — Instructor  · a month ago 
+Yes, 'oracle' is a term for a service that can be used to pull in outside info.  There are also oracles that provide better RNG solutions.
+
+Mark as helpful
+
+===============================
+14. Block Times
+
+Nonce increment in order?
+Johan · Lecture 14 · a month ago
+Is the nonce really incremented 0, 1, 2, 3...? Wouldn't this result in the fastest GPU *always* solving it first? Then there would be no reason for the people with worse GPU to mine?
+
+VD
+Vaibhav  · a month ago 
+Nonce of a block is different than the nonce of a transaction. 
+
+Block nonce is used in mining process.
+
+Transaction nonce is used to keep a track of how many transactions have been initiated by a particular address. So lets say the address was 0x123. When this address initiates a 1st transaction, nonce will be 0. Few days later, this address initiates another transaction, nonce will be 1 and so on. You get the idea.
+
+===============================
+14. Block Times
+
+Who did I send my transaction to?
+Nathan · Lecture 14 · a month ago
+You mentioned that the client sends the transaction to just one node.
+
+The chances of that node to win the proof of work are very low, yet my transaction is still there. How did the winning node get my transaction in there?
+
+Stephen — Instructor  · a month ago 
+The node that you broadcast your transaction to will re-broadcast the transaction to the rest of the network as well.  All nodes have the opportunity to see the entire pool of pending transactions and then pick and choose which ones they want to include in a block.
+
+===============================
+15. Smart Contracts
+
+What is the limit on the storage in a smart contract?
+Adam · Lecture 15 · a month ago
+I am curious on how much data storage you can put into a smart contract and at what cost? Lets say you wanted to save 5KB of data, how much would that cost?
+
+Stephen — Instructor  · a month ago 
+There's a great article on this here: https://hackernoon.com/ether-purchase-power-df40a38c5a2f
+
+Quote: "At $295/eth it cost around $5000 to store a MB"
+
+===============================
+25. Gas and Transaction
+
+One.
+Gas Price v.s. Gas Limit
+Matthew · Lecture 25 · 3 days ago
+After rewatching the video lecture, I still cannot have a clear understanding about the difference between Gas Price and Gas Limit....Is there a better way or a better explanation about these two nouns?
+
+AN
+Anaam  · 2 days ago 
+Gas Limit is the number of units like 1 Gas 2 Gas while gas price is like price of that unit 1 gas = 4 wei and 2 gas = 8 wei
+I think it is like this
+
+Mark as helpful (1)
+Stephen — Instructor  · 2 days ago 
+Anaam is correct.  Another way to think of this is like buying gasoline (petrol) for your car.  When you go to a gas station in your car, you pay a certain amount of money per liter.  That is equivalent to Ethereum's gasPrice.  Likewise, your car can only hold a certain amount of liters of gasoline - thats the absolute max amount of liters that you're willing to purchase.  Same thing for Ethereum's gasLimit.
+
+-----
+Two.
+Does Gas implemented every Cryptocurrency
+Cemal · Lecture 25 · 22 days ago
+Hi,
+
+Does gas method implemented for every cryptocurrency? Is there any way to make gasPrice=0 for private applications ?
+
+Thanks in advance / Cemal
+
+Raymond  · 22 days ago 
+Gas has to be implemented in any cryptocurrency if there is any miner in it doing validation work for the network and getting paid with those gas. So if you get gasPrice to 0, then no miner will validate your transaction, then your transaction will never be included in the blockchain.
+
+-----
+Three.
+
+Who receives this Gas ether that we spend on every transaction
+Dhaval · Lecture 25 · 2 months ago
+Who receives this ether that we are spending on every transaction ?
+
+K
+Kevin  · 2 months ago  Answer 
+The nodes that mine the blockchain. It is payment for processing the transaction. It will also help prioritize processing though I am not sure if this is in place yet. Miners would process transactions paying a higher rate for gas before transactions paying a lower rate. So, you could pay to get your transactions mined faster. 
+
+Mark as helpful (7)
+Stephen — Instructor  · 2 months ago 
+Kevin is correct, it goes to the miner who successfully solves the proof of work algorithm for the block.
+
+Mark as helpful (1)
+AP
+Anna  · a month ago 
+Is Kevin right in that there will be a hierarchy of whose transactions gets processed first based on the rate that they are paying?
+
+Mark as helpful
+Stephen — Instructor  · a month ago 
+Anna - That is correct.  Its a sort of auction system.  If you submit a transaction with a very low gas value then its possible that no miner will pick up your transaction for a long time.
+
+This is identical to the Bitcoin mining system - in the news right now you'll see mentions of how long it takes for transactions to be approved (possibly days!).  In reality, you can get a Bitcoin transaction approved within 20 minutes if you are wiling to pay enough for it.  
+
+Mark as helpful (3)
+DC
+Dhaval  · a month ago 
+One more question which may be a little out of topic here.
+
+How much use of Blockchain as technology do you guys see outside of dealing with cryptocurrencies? 
+
+Mark as helpful
+Stephen — Instructor  · a month ago 
+Dhaval - If anyone had a good answer to that we'd all be rich!  Nobody can give you a good answer yet.
+
+Mark as helpful (1)
+NH
+Nathan  · a month ago 
+Dhaval, see for example the partnership between IBM and Maersk: https://www.reuters.com/article/us-maersk-blockchain-ibm/maersk-ibm-to-launch-blockchain-based-platform-for-global-trade-idUSKBN1F51DE
+
+And I personally am working on healthcare-related use cases (for IBM as well)
+
+Mark as helpful (1)
+DC
+Dhaval  · a month ago 
+Nathan , that's great.. I am also exploring blockchain use cases which I can pitch to potential clients or make a product myself.. But thanks for sharing the link and replying. it really helps..
+
+cheers and best of luck.
+
+==========================
+30. Boiler plate requirement
+
+ABI / API
+Maciej · Lecture 30 · a month ago
+Hi, what does ABI and API mean? In this video you've said that ABI and bytecode are getting out of the compiler. So is ABI some kind of instruction for computer about how to read this bytecode? And when it comes to API, I thought that it's instruction for two separate programs to understand eachother, but then I heard someone who said that "API i.e. facebook, twitter etc.".
+
+Raymond  · a month ago 
+Yes, ABI is the instruction on how to read the bytecode. Yes, API is the instruction for two separate programs to talk to each other.
+
+Mark as helpful (1)
+MZ
+Maciej  · a month ago 
+OK, but in this case, in what sense facebook is an API?
+
+Mark as helpful
+Raymond  · a month ago 
+Facebook has their API, too. You can deploy advertisement on FB using their API. API is the bridge between two programs or two websites
