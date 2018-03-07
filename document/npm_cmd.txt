@@ -13,3 +13,9 @@ Thats it!  This installs a few build tools that are required to install web3 suc
 
 Install Mocha and Web3
 npm install --save mocha ganache-cli web3@1.0.0-beta.26
+
+Remove cache node_modules
+git rm --cached -r node_modules
+
+Test
+npm run test
