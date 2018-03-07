@@ -29,13 +29,16 @@ describe('Car', () => {
     })
 }); */
 
-beforeEach(() => {
+let accounts;
+
+beforeEach(async () => {
     // get a list of all accounts
-    web3.eth.getAccounts().then(fetchedAccounts => {
-        console.log(fetchedAccounts);
-    })
+    // await: it will waits for that request to be completed
+    accounts = await web3.eth.getAccounts();
 });
 
 describe('Inbox', () => {
-    it('deploys a contract', () => {})
-})
+    it('deploys a contract', () => {
+        console.log(accounts);
+    });
+});
