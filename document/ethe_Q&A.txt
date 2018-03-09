@@ -232,3 +232,26 @@ OK, but in this case, in what sense facebook is an API?
 Mark as helpful
 Raymond  · a month ago 
 Facebook has their API, too. You can deploy advertisement on FB using their API. API is the bridge between two programs or two websites
+
+==========================
+45. Deployed Inbox Overview
+
+What is the rationale behind setting gas price to 1000000
+Sai · Lecture 45 · a month ago
+When i modified the above price, I'm getting an error 
+
+"base fee exceeds gas limit " 
+
+Raymond  · a month ago 
+The total cost of a transaction (the "TX fee") = the Gas Limit * Gas Price
+The gas price is like gasoline price for adding gas to your car.
+
+Mark as helpful
+Sai  · a month ago 
+Raymond, Thanks for the reply
+
+Question is : why did he set to 1,000,000? Why not something else?
+
+Mark as helpful
+Raymond  · a month ago 
+If the price is too low, then the transaction will not be chosen by the miners to be included into the next block. But if the transaction is too high, then the user is paying a too high price... So there is a balance between the two bad cases. I don't know exactly what is the price. But the price of anything is determined by the market economics, the supply and demand. You just try a few times and then you will know what is a good price to pay.
