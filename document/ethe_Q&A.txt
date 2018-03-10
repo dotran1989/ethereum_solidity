@@ -255,3 +255,17 @@ Question is : why did he set to 1,000,000? Why not something else?
 Mark as helpful
 Raymond  · a month ago 
 If the price is too low, then the transaction will not be chosen by the miners to be included into the next block. But if the transaction is too high, then the user is paying a too high price... So there is a balance between the two bad cases. I don't know exactly what is the price. But the price of anything is determined by the market economics, the supply and demand. You just try a few times and then you will know what is a good price to pay.
+
+==========================
+52. Wallet Provider Setup
+
+Mnemonic privacy issue.
+Jacob · Lecture 52 · a month ago
+This seems like a bit of a security issue for me, when you have to store your mnemonic in the clear in your code. This means that it is highly recommended that you don't share a MetaMask user for your investments and your developments, as a potential intruder could get access to both if he gets your mnemonic ?
+
+Stephen — Instructor  · a month ago 
+Correct, keep that mnemonic safe.
+
+Mark as helpful (1)
+Alexander  · 19 days ago 
+make a file for keys and add it to .gitignore so you don't accidentally commit it to github :) and just import mnemonic from that file... and yes, never again use this account anyway...
