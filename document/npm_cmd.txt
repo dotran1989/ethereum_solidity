@@ -19,3 +19,6 @@ git rm --cached -r node_modules
 
 Test
 npm run test
+
+HD wallet provider
+$ npm install --save truffle-hdwallet-provider
