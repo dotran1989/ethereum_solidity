@@ -23,3 +23,4 @@ deploy();
 
 // $ node deploy.js
 // Attemping to deploy from account 0xA6B65cbD25950243c71933BDE92568831297b375
+// Contract deployed to  0xbAf778E30A7b31b67d936A5c26196469e8c454b2
