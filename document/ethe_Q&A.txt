@@ -269,3 +269,27 @@ Correct, keep that mnemonic safe.
 Mark as helpful (1)
 Alexander  · 19 days ago 
 make a file for keys and add it to .gitignore so you don't accidentally commit it to github :) and just import mnemonic from that file... and yes, never again use this account anyway...
+
+==========================
+61. The Message Global Variable
+
+Msg global variable
+Vinicius · Lecture 61 · a month ago
+The msg global variable is visible outside of the functions? Well, I don't think so, probably that variable are created when a function is called, and what happen with it after the call or transaction ends? I hope that I was clear! 
+Thanks Stephen, I'm really enjoying the course!
+
+David  · a month ago  Answer 
+The msg is a global variable so it's not created every time you create a new function, there is already one instance of that variable created even if you don't use it in your contract.
+
+You can use the global variables in different functions as many times as you want, and it will always return the same value.
+
+==========================
+70. Sending Ether from Contracts
+
+Where does money from the players go to?
+
+Ashwin · Lecture 70 · 2 months ago
+It feels like it goes to the wallet of the manager. But it looks like it exists in the Contract.
+
+Stephen — Instructor  · 2 months ago 
+The money belongs to the contract.  Contract accounts are just like 'external accounts' owned by people like you and me.  They can hold ether just like us.

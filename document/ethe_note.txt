@@ -18,6 +18,9 @@ https://iancoleman.io/bip39/
 Testnet Faucet
 https://faucet.rinkeby.io/
 
+Etherscan
+https://rinkeby.etherscan.io/
+
 VS Code
 
 Solidity is the language used in Ethereum to create smart contracts, this extension provides:
@@ -32,3 +35,8 @@ Compilation supporting EIP82 (dappfile and dependency packages)
 Support for different solidity versions (Remote and local)
 Code generation using https://github.com/Nethereum/abi-code-gen, it includes currently the default template for Nethereum service, dtos generation. (Open 'contractName.json' after compilation from the bin folder. Press F1 and press Solidity: Code generate from compilation output..) Please contribute more templates.
 Linting using Solhint or Solium
+
+Ether Solidity docs
+
+http://solidity.readthedocs.io
+http://solidity.readthedocs.io/en/develop/frequently-asked-questions.html?highlight=random%20number#how-do-you-get-a-random-number-in-a-contract-implement-a-self-returning-gambling-contract
