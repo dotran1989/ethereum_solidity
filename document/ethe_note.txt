@@ -40,3 +40,6 @@ Ether Solidity docs
 
 http://solidity.readthedocs.io
 http://solidity.readthedocs.io/en/develop/frequently-asked-questions.html?highlight=random%20number#how-do-you-get-a-random-number-in-a-contract-implement-a-self-returning-gambling-contract
+
+GitHub
+https://github.com/StephenGrider/EthereumCasts

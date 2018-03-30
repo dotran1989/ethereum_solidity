@@ -293,3 +293,13 @@ It feels like it goes to the wallet of the manager. But it looks like it exists 
 
 Stephen — Instructor  · 2 months ago 
 The money belongs to the contract.  Contract accounts are just like 'external accounts' owned by people like you and me.  They can hold ether just like us.
+
+==========================
+71. Resetting Contract State
+
+Question on emptying players array
+Michael · Lecture 71 · 2 months ago
+Would this also work?: players = []; 
+
+Stephen — Instructor  · 2 months ago 
+No, it would not.  Remember, all arrays have to be strongly typed.  Writing out simply '[]' doesn't indicate what type of element exists in the array.
